@@ -7,12 +7,12 @@
   <div class="col s6">
     <div class="card">
       <div class="card-content">
-        <span class="card-title">{{ post.name }}</span>
-        <p>Description: {{ post.description }}</p>
+        <span class="card-title">{{ post.title }}</span>
+        <p>{{ post.text}}</p>
       </div>
       <div class="card-action">
-        <a href="{% url 'posts_update' cat.id %}">Edit</a>
-        <a href="{% url 'posts_delete' cat.id %}">Delete</a>
+        <a href="{% url 'posts_update' post.id %}">Edit</a>
+        <a href="{% url 'posts_delete' post.id %}">Delete</a>
       </div>
     </div>
   </div>
