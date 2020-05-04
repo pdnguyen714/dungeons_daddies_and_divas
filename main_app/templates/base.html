@@ -11,9 +11,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
-<body>
+<body class="#37474f grey darken-3">
     <header class="navbar-fixed">
-        <nav>
+        <nav class="#37474f blue-grey darken-2">
             <div class="nav-wrapper">
                 <ul>
                     <li><a href="/" class="left brand-logo">&nbsp;&nbsp;DDD</a></li>
@@ -24,11 +24,11 @@
             </div>
         </nav>
     </header>
-    <main class="container">
+    <main class="container white-text blue-grey darken-4">
         {% block content %}
         {% endblock %}
     </main>
-  	<footer class="page-footer">
+  	<footer class="page-footer #37474f blue-grey darken-2">
        <div class="right">&copy; 2020 Dungeons, Daddies & Divas &nbsp;</div>
     </footer>
 </body>
