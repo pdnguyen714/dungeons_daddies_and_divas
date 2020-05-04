@@ -4,6 +4,7 @@ from django.views.generic.edit import CreateView, UppdateView, DeleteView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .models import Post
 
 # Create your views here.
 from django.http import HttpResponse
