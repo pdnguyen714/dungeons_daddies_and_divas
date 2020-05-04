@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
-from django.views.generic.edit import CreateView, UppdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -16,7 +16,8 @@ def about(request):
     return render(request, 'about.html')
 
 def posts_index(request):
-    return render(request, 'posts/index.html', { 'post': post})
+    posts = Post.objects.all()
+    return render(request, 'posts/index.html', { 'posts': posts})
 
 def posts_detail(request, post_id):
     return render(request, 'posts/detail.html')
