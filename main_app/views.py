@@ -12,5 +12,8 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
-def feed(request):
-    return render(request, 'feed.html')
+def posts_index(request):
+    return render(request, 'posts/index.html', { 'post': post})
+
+def posts_detail(request, post_id):
+    return render(request, 'posts/detail.html')
