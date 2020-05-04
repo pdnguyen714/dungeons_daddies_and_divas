@@ -19,3 +19,5 @@
 # Product
 * Profile Page: Users can fill out profile information to provoke other users' ~~thirst~~ interest
 * Forum Page: Users can navigate between posts and make, edit, and delete their own comments. 
+
+#Bri added this
