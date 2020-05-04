@@ -6,5 +6,6 @@ urlpatterns = [
   path('about/', views.about, name='about'),
   path('feed/', views.posts_index, name='feed'),
   path('posts/<int:pk>/', views.posts_detail, name="post_index"),
+  path('accounts/signup/', views.signup, name='signup'),
 
 ]
