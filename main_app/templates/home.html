@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="center">Welcome</h1>
+
+<div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="../static/images/carousel1.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="../static/images/carousel2.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="../static/images/carousel3.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="../static/images/carousel4.jpg"></a>
+    <a class="carousel-item" href="#five!"><img src="../static/images/carousel5.jpg"></a>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems);
+    });  
+</script>
+
+{% endblock %}
