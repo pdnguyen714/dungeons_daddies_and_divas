@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Comment List</h1>
+
+{% for comment in comments_list %}
+  <a href="{% url 'comments_detail' comment.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ comment.title }}</span>
+            <p>Text: {{ comment.text }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}

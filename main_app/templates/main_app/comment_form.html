@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+  {% if object %}
+    <h1>Editing Comment</h1>
+  {% else %}
+    <h1>Add Comment</h1>
+  {% endif %}
   <!-- Leaving the action empty makes the form post to the same url used to display it -->
-    {% if object %}
-        <h1>Editing Post</h1>
-    {% else %}
-        <h1>Add Post</h1>
-    {% endif %}
   <form action="" method="post">
     <!-- Django requires the following for security purposes -->
     {% csrf_token %}
