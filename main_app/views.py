@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView
+from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Post
+from .models import Post, Comment, Profile
 
 # Create your views here.
-from django.http import HttpResponse
 
 def home(request):
     return render(request, 'home.html')
@@ -17,10 +17,44 @@ def about(request):
 
 def posts_index(request):
     posts = Post.objects.all()
-    return render(request, 'posts/index.html', { 'posts': posts})
+    return render(request, 'posts/index.html', { 'posts': posts })
 
 def posts_detail(request, post_id):
-    return render(request, 'posts/detail.html')
+    post = Post.objects.get(id=post_id)
+    return render(request, 'posts/detail.html', { 'post': post })
+
+
+class PostCreate(CreateView):
+    model = Post
+    fields = ['title', 'text']
+    success_url = '/posts/'
+
+
+class PostUpdate(UpdateView):
+    model = Post
+    fields = ['title', 'text']
+
+class PostDelete(DeleteView):
+    model = Post
+    success_url = '/posts/'
+
+class CommentList(ListView):
+  model = Comment
+
+class CommentDetail(DetailView):
+  model = Comment
+
+class CommentCreate(CreateView):
+  model = Comment
+  fields = ['text']
+
+class CommentUpdate(UpdateView):
+  model = Comment
+  fields = ['text']
+
+class CommentDelete(DeleteView):
+  model = Comment
+  success_url = '/comments/'
 
 def signup(request):
   error_message = ''
@@ -40,10 +74,3 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
-
-class PostUpdate(UpdateView):
-    model = Post
-    fields = ['title', 'text']
-
-class PostDelete(DeleteView):
-    model = Postsuccess_url = '/feed/'
