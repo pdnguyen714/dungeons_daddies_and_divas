@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 class="center">Welcome</h1>
+<h1 class="center">Dungeons, Daddies & Divas<br><span class="red-text">Love at first roll</span></h1>
 
 <div class="carousel">
     <a class="carousel-item" href="#one!"><img src="../static/images/carousel1.jpg"></a>
@@ -13,8 +13,8 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        var elems = document.querySelectorAll('.carousel');
-        var instances = M.Carousel.init(elems);
+        const elems = document.querySelectorAll('.carousel');
+        const instances = M.Carousel.init(elems);
     });  
 </script>
 
