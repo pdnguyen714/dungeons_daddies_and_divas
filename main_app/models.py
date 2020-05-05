@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 # Create your models here.
 class Profile(models.Model):
@@ -21,9 +22,9 @@ class Comment(models.Model):
         return reverse('comments_detail', kwargs={'pk': self.id})
 
 class Post(models.Model):
-    title = models.CharField(max_length=200)
-    text = models.TextField(max_length=2000)
-    comments = models.ManyToManyField(Comment)
+    title = models.CharField(max_length=255)
+    text = models.TextField()
+    # comments = models.ManyToManyField(Comment)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):

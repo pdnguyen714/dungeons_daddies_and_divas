@@ -15,20 +15,23 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+@login_required
 def posts_index(request):
     posts = Post.objects.all()
-    return render(request, 'posts/index.html', { 'posts': posts })
+    return render(request, 'feed.html', { 'posts': posts })
 
-def posts_detail(request, post_id):
+@login_required
+def single_post(request, post_id):
     post = Post.objects.get(id=post_id)
-    return render(request, 'posts/detail.html', { 'post': post })
-
+    return render(request, 'single_post.html', { 'post': post })
 
 class PostCreate(CreateView):
     model = Post
     fields = ['title', 'text']
-    success_url = '/posts/'
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 class PostUpdate(UpdateView):
     model = Post
