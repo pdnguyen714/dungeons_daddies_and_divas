@@ -19,14 +19,17 @@
                     <li><a href="/" class="left brand-logo">&nbsp;&nbsp;DDD</a></li>
                 </ul>
                 <ul class="right">
-
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'feed' %}">Feed</a></li>
-                    <li><a href="{% url 'new_post' %}">New Post</a></li>
-
-
-
-                    <li><a href="{% url 'login' %}"></a>Log In</li>
+                        <li><a href="">About</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'comments_create' %}">Add a Comment</a></li>
+                        <li><a href="{% url 'comments_index' %}">View All Comments</a></li>
+                        <li><a href="{% url 'posts_create' %}">Add a Post</a></li>
+                        <li><a href="{% url 'index' %}">View All My Posts</a></li>
+                        <li><a href="{% url 'logout' %}">Log Out</a></li>
+                    {% else %}
+                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                        <li><a href="{% url 'login' %}">Log In</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
