@@ -46,3 +46,5 @@ class PostUpdate(UpdateView):
 
 class PostDelete(DeleteView):
     model = Postsuccess_url = '/feed/'
+
+
