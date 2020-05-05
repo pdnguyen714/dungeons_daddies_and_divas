@@ -19,13 +19,13 @@
                     <li><a href="/" class="left brand-logo">&nbsp;&nbsp;DDD</a></li>
                 </ul>
                 <ul class="right">
-                    {% if user.is_authenticated %}
+
                     <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="">Feed</a></li>
-                    <li><a href="">New Post</a></li>
-                    {% else %}
-                    <li><a href="{% url 'about' %}"></a>About</li>
-                    <li><a href="{% url 'signup' %}"></a>Sign Up</li>
+                    <li><a href="{% url 'feed' %}">Feed</a></li>
+                    <li><a href="{% url 'new_post' %}">New Post</a></li>
+
+
+
                     <li><a href="{% url 'login' %}"></a>Log In</li>
                 </ul>
             </div>

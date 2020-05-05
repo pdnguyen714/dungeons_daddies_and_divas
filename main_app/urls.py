@@ -4,8 +4,7 @@ from . import views
 urlpatterns = [
   path('', views.home, name='home'),
   path('about/', views.about, name='about'),
-  path('feed/', views.posts_index, name='feed'),
-  path('posts/<int:pk>/', views.posts_detail, name="post_index"),
-  path('accounts/signup/', views.signup, name='signup'),
-  path('posts/<int:pk>', views.PostDelete.as_view(), name="posts_delete"),
+  path('feed/', views.feed, name='feed'),
+  path('new-outdated/', views.new_post, name='new_post'),
+  path('new/', views.PostCreate.as_view(), name="post_create")
 ]

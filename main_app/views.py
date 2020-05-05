@@ -15,12 +15,11 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
-def posts_index(request):
-    posts = Post.objects.all()
-    return render(request, 'posts/index.html', { 'posts': posts})
+def feed(request):
+    return render(request, 'feed.html')
 
-def posts_detail(request, post_id):
-    return render(request, 'posts/detail.html')
+def new_post(request):
+    return render(request, 'new_post.html')
 
 def signup(request):
   error_message = ''
@@ -41,11 +40,13 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
-class PostUpdate(UpdateView):
-    model = Post
-    fields = ['title', 'text']
-
-class PostDelete(DeleteView):
-    model = Postsuccess_url = '/feed/'
 
 
+
+
+class PostCreate(CreateView):
+  model = Post
+  fields = ['title', 'text']
+
+  def form_valid(self, form):
+    return super().form_valid(form)
