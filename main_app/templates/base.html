@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dungeons, Daddies & Divas</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    <body class="#37474f grey darken-3">
+        <header>
+            <nav class="#37474f blue-grey darken-2 center"><a href="/">DDD</a></nav>
+            <ul id="slide-out" class="sidenav">
+                <li><div class="user-view">
+                    <div class="background">
+                        <img class="responsive-image" src="../../static/images/carousel1.jpg">
+                    </div>
+                    <a href="#user"><img class="circle" src="../../static/images/dnd2.jpg"></a>
+                    <a href="#name"><span class="white-text name">John Deezy</span></a>
+                    <a href="#email"><span class="white-text email">deezyfbaby@gmail.com</span></a>
+                </div></li>
+                <li><a href=""><i class="material-icons">home</i>Home</a></li>
+                <li><a href=""><i class="material-icons">description</i>About</a></li>
+                <li><a href="{% url 'comments_create' %}"><i class="material-icons">add_comment</i>Add a Comment</a></li>
+                <li><a href="{% url 'comments_index' %}"><i class="material-icons">visibility</i>View All Comments</a></li>
+                <li><a href="{% url 'posts_create' %}"><i class="material-icons">post_add</i>Add a Post</a></li>
+                <li><a href="{% url 'index' %}"><i class="material-icons">view_list</i>View All My Posts</a></li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </header>
+        
+        <main class="container white-text blue-grey darken-4">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer class="page-footer #37474f blue-grey darken-2">
+        <div class="right">&copy; 2020 Dungeons, Daddies & Divas &nbsp;</div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems);
+            });
+        </script>
+    </body>
+</html>

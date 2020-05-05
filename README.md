@@ -21,3 +21,5 @@
 * Forum Page: Users can navigate between posts and make, edit, and delete their own comments. 
 
 #Bri added this
+
+#Peter added this
