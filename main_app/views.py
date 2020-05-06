@@ -25,7 +25,7 @@ def single_post(request, post_id):
     post = Post.objects.get(id=post_id)
     return render(request, 'single_post.html', { 'post': post })
 
-class PostCreate(CreateView):
+class PostCreate(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'text']
 
@@ -33,29 +33,29 @@ class PostCreate(CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
-class PostUpdate(UpdateView):
+class PostUpdate(LoginRequiredMixin, UpdateView):
     model = Post
     fields = ['title', 'text']
 
-class PostDelete(DeleteView):
+class PostDelete(LoginRequiredMixin, DeleteView):
     model = Post
     success_url = '/posts/'
 
-class CommentList(ListView):
+class CommentList(LoginRequiredMixin, ListView):
   model = Comment
 
-class CommentDetail(DetailView):
+class CommentDetail(LoginRequiredMixin, DetailView):
   model = Comment
 
-class CommentCreate(CreateView):
-  model = Comment
-  fields = ['text']
-
-class CommentUpdate(UpdateView):
+class CommentCreate(LoginRequiredMixin, CreateView):
   model = Comment
   fields = ['text']
 
-class CommentDelete(DeleteView):
+class CommentUpdate(LoginRequiredMixin, UpdateView):
+  model = Comment
+  fields = ['text']
+
+class CommentDelete(LoginRequiredMixin, DeleteView):
   model = Comment
   success_url = '/comments/'
 
