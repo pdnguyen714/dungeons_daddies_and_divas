@@ -120,6 +120,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/feed/'
+LOGIN_REDIRECT_URL = '/posts/'
 
 LOGOUT_REDIRECT_URL = '/'
