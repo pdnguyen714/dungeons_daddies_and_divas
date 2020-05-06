@@ -2,7 +2,6 @@ body {
     display: flex;
     min-height: 1vh;
     flex-direction: column;
-    background-color: black!important;
   }
 
   main {

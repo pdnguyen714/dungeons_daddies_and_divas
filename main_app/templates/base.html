@@ -36,8 +36,8 @@
         </nav>
     </header> -->
 
-    <header class="navbar-fixed">
-        <nav class="#37474f blue-grey darken-2 center" style="position:absolute; font-size:4em"><a href="/">DDD</a></nav>
+    <header class="nav-wrapper">
+        <nav class="#37474f blue-grey darken-2 center" style="font-size:4em"><a href="/">DDD</a></nav>
         <ul id="slide-out" class="sidenav">
             <li><div class="user-view">
                 <div class="background">
@@ -59,7 +59,7 @@
                 <li><a href="{% url 'login' %}">Log In</a></li>
             {% endif %}
         </ul>
-        <a style="position:absolute; top: 1.5em;" href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a style="position:relative; bottom:3em; left:1em" href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </header>
 
 
