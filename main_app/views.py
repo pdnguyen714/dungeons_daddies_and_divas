@@ -51,6 +51,10 @@ class CommentCreate(CreateView):
   model = Comment
   fields = ['text']
 
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
+
 class CommentUpdate(UpdateView):
   model = Comment
   fields = ['text']
