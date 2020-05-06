@@ -3,11 +3,11 @@
 {% block content %}
   <h1>Delete Post</h1>
 
-  <h4>Are you sure you want to delete Post?<i class="material-icons">delete</i></h4>
+  <h4 style="font-size:1.5em"><i class="material-icons">delete</i>Are you sure you want to delete Post?</h4>
 
   <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Yes - Delete!" class="btn">
+    <input type="submit" value="Yes - Delete!" class="btn blue-grey darken-2"><br>
     <a href="{% url 'detail' post.id %}">Cancel</a>
   </form>
 {% endblock %}

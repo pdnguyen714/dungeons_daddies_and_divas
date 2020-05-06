@@ -8,11 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dungeons, Daddies & Divas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
-<body class="#37474f grey darken-3">
+<body class="grey darken-3" style="min-height:100vh">
     <!-- <header class="navbar-fixed">
         <nav class="#37474f blue-grey darken-2">
             <div class="nav-wrapper">
@@ -36,8 +36,8 @@
         </nav>
     </header> -->
 
-    <header class="nav-wrapper">
-        <nav class="#37474f blue-grey darken-2 center" style="font-size:4em"><a href="/">DDD</a></nav>
+    <header class="base-header">
+        <nav class="blue-grey darken-2 center" style="font-size:4em"><a href="/">DDD</a></nav>
         <ul id="slide-out" class="sidenav">
             <li><div class="user-view">
                 <div class="background">
@@ -49,8 +49,6 @@
             </div></li>
             <li><a href=""><i class="material-icons">description</i>About</a></li>
             {% if user.is_authenticated %}
-                <li><a href="{% url 'comments_create' %}"><i class="material-icons">add_comment</i>Add a Comment</a></li>
-                <li><a href="{% url 'comments_index' %}"><i class="material-icons">visibility</i>View All Comments</a></li>
                 <li><a href="{% url 'posts_create' %}"><i class="material-icons">post_add</i>Add a Post</a></li>
                 <li><a href="{% url 'index' %}"><i class="material-icons">view_list</i>View All My Posts</a></li>
                 <li><a href="{% url 'logout' %}">Log Out</a></li>
@@ -63,7 +61,7 @@
     </header>
 
 
-    <main class="container white-text blue-grey darken-4">
+    <main class="container white-text blue-grey darken-4 center" style="padding:0 2em 0 2em; width:90%; margin-bottom:2em">
         {% block content %}
         {% endblock %}
     </main>
