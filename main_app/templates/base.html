@@ -12,32 +12,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
-<body class="grey darken-3" style="min-height:100vh">
-    <!-- <header class="navbar-fixed">
-        <nav class="#37474f blue-grey darken-2">
-            <div class="nav-wrapper">
-                <ul>
-                    <li><a href="/" class="left brand-logo">&nbsp;&nbsp;DDD</a></li>
-                </ul>
-                <ul class="right">
-                        <li><a href="">About</a></li>
-                    {% if user.is_authenticated %}
-                        <li><a href="{% url 'comments_create' %}">Add a Comment</a></li>
-                        <li><a href="{% url 'comments_index' %}">View All Comments</a></li>
-                        <li><a href="{% url 'posts_create' %}">Add a Post</a></li>
-                        <li><a href="{% url 'index' %}">View All My Posts</a></li>
-                        <li><a href="{% url 'logout' %}">Log Out</a></li>
-                    {% else %}
-                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                        <li><a href="{% url 'login' %}">Log In</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
-    </header> -->
-
+<body style="min-height:100vh">
     <header class="base-header">
-        <nav class="blue-grey darken-2 center" style="font-size:4em"><a href="/">DDD</a></nav>
+        <nav class="blue-grey darken-2 brand-logo center" style="font-size:4em"><a href="/">DDD</a></nav>
         <ul id="slide-out" class="sidenav">
             <li><div class="user-view">
                 <div class="background">
@@ -59,7 +36,6 @@
         </ul>
         <a style="position:relative; bottom:3em; left:1em" href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </header>
-
 
     <main class="container white-text blue-grey darken-4 center" style="padding:0 2em 0 2em; width:90%; margin-bottom:2em">
         {% block content %}
