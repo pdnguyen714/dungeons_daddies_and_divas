@@ -48,8 +48,13 @@ class CommentDetail(LoginRequiredMixin, DetailView):
   model = Comment
 
 class CommentCreate(LoginRequiredMixin, CreateView):
-  model = Comment
-  fields = ['text']
+    model = Comment
+    fields = ['text']
+   
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 class CommentUpdate(LoginRequiredMixin, UpdateView):
   model = Comment
