@@ -8,10 +8,12 @@
                 <span class="card-title" style="color:black">{{ post.title }}</span>
                 <p style="color:black">Text: {{ post.text }}</p>
             </div>
+            {% if post.user.id == user.id %}
             <div class="card-action">
                 <a href="{% url 'posts_update' post.id %}">Edit</a>
                 <a href="{% url 'posts_delete' post.id %}">Delete</a>
             </div>
+            {% endif %}
         </div>
     </div>
 </div>
