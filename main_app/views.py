@@ -23,7 +23,10 @@ def posts_index(request):
 @login_required
 def single_post(request, post_id):
     post = Post.objects.get(id=post_id)
-    return render(request, 'single_post.html', { 'post': post })
+    return render(request, 'single_post.html', { 
+      'post': post, 
+      'user': request.user,
+    })
 
 class PostCreate(LoginRequiredMixin, CreateView):
     model = Post
