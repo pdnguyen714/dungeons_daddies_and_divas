@@ -5,8 +5,6 @@
 Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players to meet, make connections, and have enough adventures for multiple lifetimes.
 
 ## Screenshots
-![Screenshot1](https://i.imgur.com/Ln0iGzZ.png)
-![Screenshot2](https://i.imgur.com/rydcSMf.png)
 
 ## Links
 [Trello Board](https://trello.com/b/G0CVxSif/project-3)
@@ -14,7 +12,7 @@ Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players 
 [Heroku Link](https://heroku.com)
 
 ## Roles:
-* Bri:
+* Bri: CRUD Wizard, Auth Gaurd
 * Peter:
 * Victor: GitHub Master, Back-end Primer, README Polisher
 
