@@ -21,19 +21,29 @@
 <div class="row">
     <div class="col s6">
       <h3>Comments</h3>
-      {% if post.comments.count %}
-        {% for comment in post.comments.all %}
+      {% if comments %}
+        {% for comment in comments %}
             <div class="card">
                 <div class="card-content">
-                    <span class="card-title"> {{ comment.title }}</span>
                      <p>{{ comment.text}}</p>
+                     {% if comment.user.id == user.id %}
+                     <div class="card-action">
+                        <a href="{% url 'comments_update' comment.id %}">Edit</a>
+                        <a href="{% url 'comments_delete' comment.id %}">Delete</a>
+                     </div>
+                     {% endif %}
                 </div>
             </div>
         {% endfor %}
       {% else %}
         <h5>No Comments</h5>
       {% endif %}
-      <a href="{% url 'comments_create' %}">New Comment</a>
+
+      <form action="{% url 'add_comment' post.id %}" method="post">
+      {% csrf_token %}
+      {{ comment_form.as_p }}
+      <input type="submit" value="Add Comment">
+      </form>
     </div>
   </div>
           

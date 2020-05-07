@@ -24,10 +24,8 @@
                 <a href="#name"><span class="white-text name">John Deezy</span></a>
                 <a href="#email"><span class="white-text email">deezyfbaby@gmail.com</span></a>
             </div></li>
-            <li><a href=""><i class="material-icons">description</i>About</a></li>
+            <li><a href="{% url 'about' %}"><i class="material-icons">description</i>About</a></li>
             {% if user.is_authenticated %}
-                <li><a href="{% url 'comments_create' %}"><i class="material-icons">add_comment</i>Add a Comment</a></li>
-                <li><a href="{% url 'comments_index' %}"><i class="material-icons">visibility</i>View All Comments</a></li>
                 <li><a href="{% url 'posts_create' %}"><i class="material-icons">post_add</i>Add a Post</a></li>
                 <li><a href="{% url 'index' %}"><i class="material-icons">view_list</i>View All My Posts</a></li>
                 <li><a href="{% url 'logout' %}">Log Out</a></li>
