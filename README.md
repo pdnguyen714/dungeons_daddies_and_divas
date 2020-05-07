@@ -9,9 +9,9 @@ Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players 
 ![Screenshot2](https://i.imgur.com/rydcSMf.png)
 
 ## Links
-[Trello Board](https://trello.com/b/G0CVxSif/project-3)
-[Pitch Deck](https://docs.google.com/presentation/d/1jXKHh1nWmabZvNPeEpgv_w_-TBphth22rVXQ8sqlt6E/edit?usp=sharing)
-[Heroku Link](https://heroku.com)
+* [Trello Board](https://trello.com/b/G0CVxSif/project-3)
+* [Pitch Deck](https://docs.google.com/presentation/d/1jXKHh1nWmabZvNPeEpgv_w_-TBphth22rVXQ8sqlt6E/edit?usp=sharing)
+* [Heroku Link](https://dungeons-daddies-and-divas.herokuapp.com/ )
 
 ## Roles:
 * Bri: CRUD Wizard, Auth Guard, Zoom God
