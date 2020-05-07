@@ -41,6 +41,10 @@ body {
     font-size: 1em;
   }
 
+  p {
+    font-size: 1.2em;
+  }
+
   input.btn {
     background-color: #f7a148;
   }
@@ -53,7 +57,7 @@ body {
     color: #f7a148;
   }
 
-  .card-content p {
+  .card-content {
     color: white;
   }
 
