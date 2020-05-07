@@ -14,8 +14,8 @@ Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players 
 [Heroku Link](https://heroku.com)
 
 ## Roles:
-* Bri:
-* Peter:
+* Bri: CRUD Wizard, Auth Guard, Zoom God
+* Peter: Template Aficionado, Sorcerer of CSS
 * Victor: GitHub Master, Back-end Primer, README Polisher
 
 ## Problems We're Solving:
