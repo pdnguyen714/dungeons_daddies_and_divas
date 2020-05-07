@@ -1,14 +1,79 @@
+* {
+  font-family: 'Yeseva One', cursive;
+}
+
+nav, .page-footer {
+  background-color:#3a3939;
+}
+
+nav a {
+  text-decoration: line-through;
+  color: #ec9745;
+}
+
+.gold-headers {
+  color: #ec9745;
+}
+
 body {
+    background-image: url('../images/bg1.jpg');
+    background-position: 50% -41%;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: black;
   }
-  
+
   main {
     flex: 1 0 auto;
+    background-color: #000000a8;
+  }
+
+  input, textarea, label {
+    color:#f7a148;
+    font-size: 1em;
+  }
+
+  input, textarea {
+    color: white;
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  input.btn {
+    background-color: #f7a148;
+  }
+
+  .card {
+    background-color: #ffffff45;
+  }
+
+  .card-title {
+    color: #f7a148;
+  }
+
+  .card-content {
+    color: white;
+  }
+
+  .card-action {
+    background-color: #ffffffbf;  
+  }
+
+  .material-icons {
+    color: #f7a148;
   }
   
   footer.page-footer {
     padding-top: 0;
     text-align: right;
+  }
+
+  select {
+    display: block !important;
   }
