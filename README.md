@@ -6,7 +6,7 @@ Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players 
 
 ## Screenshots
 ![Screenshot1](https://i.imgur.com/Ln0iGzZ.png)
-![Screenshot2](https://i.imgur.com/rydcSMf.png)
+![Screenshot2](https://i.imgur.com/rydcSMf.png)git 
 
 ## Links
 [Trello Board](https://trello.com/b/G0CVxSif/project-3)

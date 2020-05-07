@@ -1,21 +1,50 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>About DDD</h1>
-
-<p>Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players to meet, make connections, and have enough adventures for multiple lifetimes.</p>
-
-<p>The current version of our site is a simple forum for users to create, comment on, edit, qnd delete posts. In future development, we would like to explore features that empower users to create profile pages and maximize the ways they might communicate with one another.</p>
-
-<p>Feel free to make this a space to be the most authentic fantastical versions of yourselves! And please, let us, the developers, know how we can help you, the great nerds of this world, find love. If nerds don't find love quick, we'll go extinct!</p>
-<br>
-<br>
-<img src="../static/screenshots/GuyFieri2.jpg" alt="">
-<br>
-<p>Be Whoever You Want! (art credit: <a href="https://www.sampetersonart.com/">Sam Peterson</a>)</p>
-<br>
-<img src="../static/screenshots/GuyFieri1.jpg" alt="">
-<br>
-<p>And Find Your Perfect Match! (And thanks Guy Fieri)</p>
-
+<h1 class="gold-headers">About DDD</h1><hr>
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <h1 style="color:white; font-size:1.6em;"><span style="font-size:1.7em; text-decoration: underline;">Welcome to Dungeons, Daddies and Divas</span> <br><br> DDD is an all-inclusive space for DnD players to meet, make connections, and have enough adventures for multiple lifetimes.</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col s6">
+        <div class="card">
+            <div class="card-content" style="height:14em">
+                <p class="gold-headers">The current version of our site is a simple forum for users to create, comment on, edit, qnd delete posts. In future development, we would like to explore features that empower users to create profile pages and maximize the ways they might communicate with one another.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col s6">
+        <div class="card">
+            <div class="card-content" style="height:14em">
+                <p class="gold-headers">Feel free to make this a space to be the most authentic fantastical versions of yourselves! And please, let us, the developers, know how we can help you, the great nerds of this world, find love. If nerds don't find love quick, we'll go extinct!</p>
+            </div>
+        </div>
+    </div>
+    <div class="col s6">
+        <div class="card">
+            <div class="card-content" style="height:50.6em">
+                <br>
+                <p>Be Whoever You Want! art credit: <a href="https://www.sampetersonart.com/">Sam Peterson</a></p>
+                <br>
+                <img class="responsive-img" src="../static/screenshots/GuyFieri2.jpg" alt="">
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="col s6">
+        <div class="card">
+            <div class="card-content">
+                <br>
+                <p>Find Your Perfect Match! (And thanks Guy Fieri)</p>
+                <br>
+                <img class="responsive-img" src="../static/screenshots/GuyFieri1.jpg" alt="">
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
