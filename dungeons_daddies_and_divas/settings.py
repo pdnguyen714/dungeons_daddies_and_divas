@@ -128,3 +128,8 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL = '/posts/'
 
 LOGOUT_REDIRECT_URL = '/'
+
+#Heroku Config Below
+
+import django_heroku
+django_heroku.settings(locals())
