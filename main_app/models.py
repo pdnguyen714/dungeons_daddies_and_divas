@@ -1,7 +1,9 @@
 from django.db import models
 from django.urls import reverse
+from datetime import date
 from django.contrib.auth.models import User
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+
 
 # Create your models here.
 class Profile(models.Model):
@@ -27,6 +29,9 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+
+    # class Meta:
+    #     ordering = ['-date']
     
     # we may not even need this since we don't even use the "view a toy" page like a "view a comment" page
  
