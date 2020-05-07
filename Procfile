@@ -1,0 +1,1 @@
+web: gunicorn dungeons_daddies_and_divas.wsgi
