@@ -10,11 +10,11 @@
   <form action="" method="post">
     <!-- Django requires the following for security purposes -->
     {% csrf_token %}
-    <table style="background-color:white">
+    <table>
       <!-- Render the inputs inside of <tr>s & <td>s -->
       {{ form.as_table }}
     </table>
     <br>
-    <input type="submit" value="Submit!" class="btn blue-grey darken-2" style="margin-left:1em">
+    <input type="submit" value="Submit!" class="btn" style="margin-left:1em">
   </form>
 {% endblock %}

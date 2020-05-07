@@ -9,20 +9,23 @@
     <title>Dungeons, Daddies & Divas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
-<body style="min-height:100vh">
+<body class="white-text" style="min-height:100vh">
     <header class="base-header">
-        <nav class="blue-grey darken-2 brand-logo center" style="font-size:4em"><a href="/">DDD</a></nav>
+        <nav class="brand-logo center" style="font-size:4em"><a href="/">DDD</a></nav>
         <ul id="slide-out" class="sidenav">
             <li><div class="user-view">
                 <div class="background">
                     <img class="responsive-image" src="../../static/images/carousel1.jpg">
                 </div>
                 <a href="#user"><img class="circle" src="../../static/images/dnd2.jpg"></a>
-                <a href="#name"><span class="white-text name">John Deezy</span></a>
-                <a href="#email"><span class="white-text email">deezyfbaby@gmail.com</span></a>
+                {% for post in posts %}
+                <a href="#name"><span class="gold-headers name">{{ post.user }}</span></a>
+                <a href="#email"><span class="gold-headers email">{{ post.user }}@gmail.com</span></a>
+                {% endfor %}
             </div></li>
             <li><a href="{% url 'about' %}"><i class="material-icons">description</i>About</a></li>
             {% if user.is_authenticated %}
@@ -37,12 +40,12 @@
         <a style="position:relative; bottom:3em; left:1em" href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </header>
 
-    <main class="container white-text blue-grey darken-4 center" style="padding:0 2em 0 2em; width:90%; margin-bottom:2em">
+    <main class="container white-text center" style="padding:0 2em 0 2em; width:90%; margin-bottom:2em; opacity:0.9">
         {% block content %}
         {% endblock %}
     </main>
 
-  	<footer class="page-footer #37474f blue-grey darken-2">
+  	<footer class="page-footer">
        <div class="right">&copy; 2020 Dungeons, Daddies & Divas &nbsp;</div>
     </footer>
 
