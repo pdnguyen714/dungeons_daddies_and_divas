@@ -22,7 +22,7 @@ def posts_index(request):
 @login_required
 def single_post(request, post_id):
     post = Post.objects.get(id=post_id)
-    comments = Comment.objects.filter(post = post_id)
+    comments = Comment.objects.filter(post=post_id)
     comment_form = CommentForm()
     return render(request, 'single_post.html', { 
       'post': post, 
