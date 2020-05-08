@@ -8,8 +8,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post, Comment, User
 from .forms import CommentForm 
 
-# Create your views here.
-
 def home(request):
     return render(request, 'home.html')
 
@@ -24,7 +22,7 @@ def posts_index(request):
 @login_required
 def single_post(request, post_id):
     post = Post.objects.get(id=post_id)
-    comments = Comment.objects.filter(post = post_id)
+    comments = Comment.objects.filter(post=post_id)
     comment_form = CommentForm()
     return render(request, 'single_post.html', { 
       'post': post, 
@@ -65,15 +63,6 @@ class CommentList(LoginRequiredMixin, ListView):
 class CommentDetail(LoginRequiredMixin, DetailView):
   model = Comment
 
-# class CommentCreate(LoginRequiredMixin, CreateView):
-#     model = Comment
-#     fields = ['text', 'post']
-#     fields['post'].widget = forms.HiddenInput()
-
-#     def form_valid(self, form):
-#         form.instance.user = self.request.user
-#         return super().form_valid(form)
-
 class CommentUpdate(LoginRequiredMixin, UpdateView):
   model = Comment
   fields = ['text']
@@ -89,27 +78,22 @@ class CommentDelete(LoginRequiredMixin, DeleteView):
 def signup(request):
   error_message = ''
   if request.method == 'POST':
-    # This is how to create a 'user' form object
-    # that includes the data from the browser
     form = UserCreationForm(request.POST)
     if form.is_valid():
-      # This will add the user to the database
       user = form.save()
-      # This is how we log a user in via code
       login(request, user)
       return redirect('index')
     else:
       error_message = 'Invalid sign up - try again'
-  # A bad POST or a GET request, so render signup.html with an empty form
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
-def associate_comment(request, post_id, comment_id):
-  Post.objects.get(id=post_id).comments.add(comment_id)
-  return redirect('detail', post_id=post_id)
+# def associate_comment(request, post_id, comment_id):
+#   Post.objects.get(id=post_id).comments.add(comment_id)
+#   return redirect('detail', post_id=post_id)
 
-def unassoc_toy(request, cat_id, toy_id):
-  post_id = Comment.objects.get(id=comment_id).post_id
-  Post.objects.get(id=post_id).toys.remove(toy_id)
-  return redirect('post_detail', id=post_id)
+# def unassoc_comment(request, post_id, comment_id):
+#   post_id = Comment.objects.get(id=comment_id).post_id
+#   Post.objects.get(id=post_id).comments.remove(comment_id)
+#   return redirect('post_detail', id=post_id)
