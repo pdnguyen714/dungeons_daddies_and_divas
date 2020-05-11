@@ -30,7 +30,7 @@
             <li><a href="{% url 'about' %}"><i class="material-icons">description</i>About</a></li>
             {% if user.is_authenticated %}
                 <li><a href="{% url 'posts_create' %}"><i class="material-icons">post_add</i>Add a Post</a></li>
-                <li><a href="{% url 'index' %}"><i class="material-icons">view_list</i>View All My Posts</a></li>
+                <li><a href="{% url 'index' %}"><i class="material-icons">view_list</i>View All Posts</a></li>
                 <li><a href="{% url 'logout' %}">Log Out</a></li>
             {% else %}
                 <li><a href="{% url 'signup' %}">Sign Up</a></li>
