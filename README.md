@@ -6,17 +6,20 @@ Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players 
 
 ## Screenshots
 ![Screenshot1](https://i.imgur.com/Ln0iGzZ.png)
-![Screenshot2](https://i.imgur.com/rydcSMf.png)git 
+![Screenshot2](https://i.imgur.com/rydcSMf.png) 
 
 ## Links
 * [Trello Board](https://trello.com/b/G0CVxSif/project-3)
 * [Pitch Deck](https://docs.google.com/presentation/d/1jXKHh1nWmabZvNPeEpgv_w_-TBphth22rVXQ8sqlt6E/edit?usp=sharing)
-* [Heroku Link](https://dungeons-daddies-and-divas.herokuapp.com/ )
+* [Heroku Link](https://dungeons-daddies-and-divas.herokuapp.com/)
 
 ## Roles:
-* Bri: CRUD Wizard, Auth Gaurd 
-* Peter:
+* Bri: CRUD Wizard, Auth Gaurd
+* Peter: UX/Template Aficionado, Sorcerer of CSS
 * Victor: GitHub Master, Back-end Primer, README Polisher
+
+## Technologies Used
+* Django, Python, PostgreSQL, CSS, Materialize
 
 ## Problems We're Solving:
 * DnD Players want to find other players
@@ -41,4 +44,3 @@ Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players 
 * Chat Functionality
 * Post Categories and Sorting
 * Profile Matching Algorithims
-
