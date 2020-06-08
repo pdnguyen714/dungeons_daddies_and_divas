@@ -11,7 +11,7 @@ Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players 
 ## Links
 * [Trello Board](https://trello.com/b/G0CVxSif/project-3)
 * [Pitch Deck](https://docs.google.com/presentation/d/1jXKHh1nWmabZvNPeEpgv_w_-TBphth22rVXQ8sqlt6E/edit?usp=sharing)
-* [Heroku Link](https://dungeons-daddies-and-divas.herokuapp.com/ )
+* [Heroku Link](https://dungeons-daddies-and-divas.herokuapp.com/)
 
 ## Roles:
 * Bri: CRUD Wizard, Auth Gaurd
@@ -44,4 +44,3 @@ Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players 
 * Chat Functionality
 * Post Categories and Sorting
 * Profile Matching Algorithims
-
