@@ -19,7 +19,7 @@ Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players 
 * Victor: GitHub Master, Back-end Primer, README Polisher
 
 ## Technologies Used
-* Django, Python, PostgreSQL, CSS, Materialize
+* Django, Python, PostgreSQL, CSS3, Materialize
 
 ## Problems We're Solving:
 * DnD Players want to find other players
