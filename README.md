@@ -2,29 +2,27 @@
 ###### Love at First Roll
 
 ## General Description
-Welcome to Dungeons, Daddies, and Divas, an all-inclusive space for DnD players to meet, make connections, and have enough adventures for multiple lifetimes.
+Welcome to Dungeons, Daddies and Divas, an all-inclusive space for Dungeons & Dragons players to meet, make connections, and have enough adventures for multiple lifetimes.
 
 ## Screenshots
 ![Screenshot1](https://i.imgur.com/Ln0iGzZ.png)
 ![Screenshot2](https://i.imgur.com/rydcSMf.png) 
 
-## Links
-* [Trello Board](https://trello.com/b/G0CVxSif/project-3)
-* [Pitch Deck](https://docs.google.com/presentation/d/1jXKHh1nWmabZvNPeEpgv_w_-TBphth22rVXQ8sqlt6E/edit?usp=sharing)
+## Link
 * [Heroku Link](https://dungeons-daddies-and-divas.herokuapp.com/)
 
 ## Roles:
-* Bri: CRUD Wizard, Auth Gaurd
-* Peter: UX/Template Aficionado, Sorcerer of CSS
-* Victor: GitHub Master, Back-end Primer, README Polisher
+* Briahna Yee: CRUD Wizard, Auth Gaurd
+* Peter Nguyen: UX/Template Aficionado, Sorcerer of CSS
+* Victor Luo: GitHub Master, Back-end Primer, README Polisher
 
 ## Technologies Used
-* Django, Python, PostgreSQL, CSS, Materialize
+* Django, Python, PostgreSQL, CSS3, Materialize
 
 ## Problems We're Solving:
-* DnD Players want to find other players
-* DnD Players are lonely and looking for love
-* DnD Players don't have a good place to meet each other
+* D&D Players want to find other players
+* D&D Players are lonely and looking for love
+* D&D Players don't have a good place to meet each other
 
 ## Advantages 
 * A dedicated space just for DnD players to fully express themselves maximizes their potential for making a meaningful connection
